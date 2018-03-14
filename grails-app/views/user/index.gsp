@@ -1,5 +1,5 @@
 
-<%@ page import="com.zy.zds.auth.User" %>
+<%@ page import="park.User" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -15,11 +15,13 @@
         </div>
         <div class="conmain">
             <g:link class="botton" action="create">新增</g:link>
+            <div style="height: 10px"></div>
             <g:form url="[action:'getUser',controller:'user']" >
-                <input name="searchString" id="search" />
+                <input name="searchString" id="search" style="height: 30px"/>
                 <input type="submit" style="float:right;margin-right:640px;" value="查询" />
             </g:form>
         </div>
+        <div style="height: 10px"></div>
         <div class="conmain">
             <strong class="Orange">
                 <g:if test="${flash.message}">

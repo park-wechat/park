@@ -1,4 +1,4 @@
-<%@ page import="com.zy.zds.auth.User" %>
+<%@ page import="park.User" %>
 
 <table>
     <tr>
@@ -14,14 +14,6 @@
         <td><input type="password" name="password" value="${userInstance?.password}">
             %{--<g:textField name="password" required="" value="${userInstance?.password}"/></td>--}%
     </tr>
-    <tr>
-        <td class="fieldcontain ${hasErrors(bean: userInstance, field: 'store', 'error')} required">所属门店</td>
-        <td><g:select name="store" from="${com.zy.zds.vo.Store.list().collect{it.zzmdmc}}" required="" value="${userInstance?.store}"/></td>
-    </tr>
-    %{--<tr>--}%
-        %{--<td class="fieldcontain ${hasErrors(bean: userInstance, field: 'store', 'error')} required">所属门店</td>--}%
-        %{--<td><input id="store1" name="store1" value=""/></td>--}%
-    %{--</tr>--}%
     <tr>
         <td class="fieldcontain ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">是否启用</td>
         <td><g:checkBox name="enabled" value="${userInstance?.enabled}" /></td>

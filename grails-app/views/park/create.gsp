@@ -2,16 +2,16 @@
 <html>
 	<head>
         <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'style.css')}" />
-		<g:set var="entityName" value="${message(code: 'newsNotice.label', default: 'NewsNotice')}" />
+		<g:set var="entityName" value="${message(code: 'park.label', default: 'park')}" />
 		<title><g:message code="default.create.label" args="[entityName]" /></title>
         <ckeditor:resources/>
 	</head>
 	<body>
-    <div class="title">新闻培训新增界面</div>
+    <div class="title">景区创建</div>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
-			<g:form url="[resource:newsNoticeInstance, action:'save']" >
+			<g:form url="[resource:parkInstance, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

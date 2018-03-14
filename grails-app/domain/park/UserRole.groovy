@@ -7,6 +7,11 @@ class UserRole implements Serializable{
     User user
     Role role
 
+    UserRole(User user,Role role){
+        this.user = user;
+        this.role = role;
+    }
+
     boolean equals(other) {
         if (!(other instanceof UserRole)) {
             return false
@@ -77,16 +82,16 @@ class UserRole implements Serializable{
     }
 
     static constraints = {
-        role validator: { Role r, UserRole ur ->
-            if (ur.user == null) return
-            boolean existing = false
-            UserRole.withNewSession {
-                existing = UserRole.exists(ur.user.id, r.id)
-            }
-            if (existing) {
-                return 'userRole.exists'
-            }
-        }
+//        role validator: { Role r, UserRole ur ->
+//            if (ur.user == null) return
+//            boolean existing = false
+//            UserRole.withNewSession {
+//                existing = UserRole.exists(ur.user.id, r.id)
+//            }
+//            if (existing) {
+//                return 'userRole.exists'
+//            }
+//        }
     }
 
     static mapping = {

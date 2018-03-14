@@ -6,17 +6,25 @@
     def path = new File("${uploader}/rooms/"+ roomUrl)
 %>
 <table>
-    %{--<tr>--}%
-        %{--<td class="fieldcontain ${hasErrors(bean:menu, field: 'restaurant', 'error')} required">餐厅名称</td>--}%
-        %{--<td><g:hiddenField name="restaurant_id" style="width:480px" required="" value="${restaurant}"/></td>--}%
-    %{--</tr>--}%
     <tr>
         <td class="fieldcontain ${hasErrors(bean: room, field: 'roomName', 'error')} required">房间名称</td>
-        <td><g:textField name="roomName" style="width:480px" required="" value="${room?.roomName}"/></td>
+        <td><g:textField name="roomName" style="width:480px" value="${room?.roomName}"/></td>
     </tr>
     <tr>
         <td class="fieldcontain ${hasErrors(bean: room, field: 'price', 'error')} required">价格</td>
         <td><g:textField name="price" style="width:480px" required="" value="${room?.price}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomLevel', 'error')} required">房间等级</td>
+        <td><g:textField name="roomLevel" style="width:480px" required="" value="${room?.roomLevel}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomInformation', 'error')} required">房间介绍</td>
+        <td><g:textArea name="roomInformation" style="width:480px" required="" value="${room?.roomInformation}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'mark', 'error')} required">备注/td>
+        <td><g:textArea name="mark" style="width:480px" required="" value="${room?.mark}"/></td>
     </tr>
     <tr>
         <td class="fieldcontain ${hasErrors(bean: room, field: 'roomUrl', 'error')} required">房间图片</td>

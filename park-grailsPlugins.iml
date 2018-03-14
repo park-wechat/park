@@ -14,12 +14,62 @@
           <root url="file://$MODULE_DIR$/target/work/plugins/jaxrs-0.11/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/grails-app/views" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/web-app" relative="/" />
-          <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-date-time-picker-0.2.0/web-app" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-date-time-picker-0.2.0/grails-app/views" relative="/" />
           <root url="file://$MODULE_DIR$/target/work/plugins/jquery-ui-1.10.4/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.4/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0/web-app" relative="/" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0/grails-app/views" relative="/" />
         </webroots>
+        <sourceRoots>
+          <root url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/services" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/i18n" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/grails-app/services" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/grails-app/i18n" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/ckeditor-4.4.1.0/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/cors-1.1.6/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.4.0/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/database-migration-1.4.0/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/hibernate4-4.3.6.1/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jaxrs-0.11/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jaxrs-0.11/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jaxrs-0.11/grails-app/i18n" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jaxrs-0.11/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/grails-app/services" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-1.11.1/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-date-time-picker-0.2.0/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-date-time-picker-0.2.0/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/jquery-ui-1.10.4/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.8/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.8/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.8/grails-app/i18n" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/resources-1.2.8/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/scaffolding-2.1.2/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/grails-app/i18n" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/grails-app/services" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-core-2.0-RC4/grails-app/taglib" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-rest-1.4.0.RC5/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-rest-1.4.0.RC5/grails-app/controllers" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/spring-security-rest-1.4.0.RC5/grails-app/services" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.55/src/java" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.55/src/groovy" />
+          <root url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1/src/groovy" />
+        </sourceRoots>
       </configuration>
     </facet>
     <facet type="hibernate" name="Hibernate">
@@ -31,16 +81,11 @@
   </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
-    <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/src/groovy" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/controllers" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/services" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-1.9.9/grails-app/taglib" isTestSource="false" />
-    </content>
-    <content url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2">
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/i18n" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/controllers" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/bootstrap-file-upload-2.1.2/grails-app/taglib" isTestSource="false" />
+    <content url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-2.9.1">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-2.9.1/src/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-2.9.1/src/groovy" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-2.9.1/grails-app/services" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/asset-pipeline-2.9.1/grails-app/taglib" isTestSource="false" />
     </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/cache-1.1.8/src/java" isTestSource="false" />
@@ -109,6 +154,15 @@
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.55/src/java" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/tomcat-7.0.55/src/groovy" isTestSource="false" />
     </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.4">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.4/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/twitter-bootstrap-3.3.4/grails-app/taglib" isTestSource="false" />
+    </content>
+    <content url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0">
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0/grails-app/i18n" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0/grails-app/controllers" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/uploadr-1.0.0/grails-app/taglib" isTestSource="false" />
+    </content>
     <content url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1">
       <sourceFolder url="file://$MODULE_DIR$/target/work/plugins/webxml-1.4.1/src/groovy" isTestSource="false" />
     </content>
@@ -138,7 +192,6 @@
           <root url="jar://$MAVEN_REPOSITORY$/com/fasterxml/classmate/1.0.0/classmate-1.0.0.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/hibernate/hibernate-validator/5.1.1.Final/hibernate-validator-5.1.1.Final.jar!/" />
-          <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/grails/grails-datastore-test-support/1.0.2-grails-2.4/grails-datastore-test-support-1.0.2-grails-2.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/cglib/cglib-nodep/2.2.2/cglib-nodep-2.2.2.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/7.0.55/tomcat-embed-core-7.0.55.jar!/" />
@@ -175,6 +228,13 @@
           <root url="jar://$MAVEN_REPOSITORY$/org/restlet/gae/org.restlet.ext.json/2.1.4/org.restlet.ext.json-2.1.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/restlet/gae/org.restlet.ext.servlet/2.1.4/org.restlet.ext.servlet-2.1.4.jar!/" />
           <root url="jar://$MAVEN_REPOSITORY$/org/restlet/gae/org.restlet/2.1.4/org.restlet-2.1.4.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/org/mozilla/rhino/1.7R4/rhino-1.7R4.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/bertramlabs/plugins/asset-pipeline-core/2.9.1/asset-pipeline-core-2.9.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/guava/guava/19.0/guava-19.0.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/args4j/args4j/2.0.26/args4j-2.0.26.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/javascript/closure-compiler-externs/v20160315/closure-compiler-externs-v20160315.jar!/" />
+          <root url="jar://$MAVEN_REPOSITORY$/com/google/javascript/closure-compiler/v20160315/closure-compiler-v20160315.jar!/" />
         </CLASSES>
         <JAVADOC />
         <SOURCES />

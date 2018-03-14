@@ -14,7 +14,7 @@
     %{--</tr>--}%
     <tr>
         <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuName', 'error')} required">菜谱名称</td>
-        <td><g:textField name="menuName" style="width:480px" required="" value="${menu?.menuName}"/></td>
+        <td><g:textField name="menuName" style="width:480px" readonly="true" value="${menu?.menuName}"/></td>
     </tr>
     <tr>
         <td class="fieldcontain ${hasErrors(bean: menu, field: 'price', 'error')} required">价格</td>
@@ -25,10 +25,22 @@
         <td><g:textField name="sale" style="width:480px" required="" value="${menu?.sale}"/></td>
     </tr>
     <tr>
+        <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuIntroduce', 'error')} required">菜谱介绍</td>
+        <td><g:textArea name="menuIntroduce" style="width:480px" required="" value="${menu?.menuIntroduce}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuInfomation', 'error')} required">菜谱成分</td>
+        <td><g:textArea name="menuInfomation" style="width:480px" required="" value="${menu?.menuInfomation}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: menu, field: 'mark', 'error')} required">备注</td>
+        <td><g:textArea name="mark" style="width:480px" required="" value="${menu?.mark}"/></td>
+    </tr>
+    <tr>
         <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuUrl', 'error')} required">菜谱图片</td>
         <g:hiddenField name="menuUrl" style="width:480px" required="" value="${menuUrl}" />
         <td>
-            <uploadr:add name="uploadr" path="${path}" allowedExtensions="jpg,png,gif" direction="up" maxVisible="10"
+            <uploadr:add name="editUploadr" path="${path}" allowedExtensions="jpg,png,gif" direction="up" maxVisible="10"
                          unsupported="${createLink(plugin: 'uploadr', controller: 'upload', action: 'warning')}" maxSize="52428800"
                          model="[booleanOne:true, variableTwo: 'foo', variableThree: 'bar', variableFour: 4, myObject: someObject]">
                 <g:each in="${path.listFiles()}" var="file">

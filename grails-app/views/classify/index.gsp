@@ -10,10 +10,10 @@
 	<body>
     <div class="content">
         <div class="contiter">
-            <h2>景区列表</h2>
+            <h2>分类列表</h2>
         </div>
         <div class="conmain">
-            <a class="botton" href="create">新增</a>
+            <a class="botton" href="create">新增分类</a>
         </div>
         <div class="conmain">
             <strong class="Orange">
@@ -25,18 +25,18 @@
         <div class="conmain">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr class="tbbg">
-                    <td width="70%" align="center"><strong>景区名称</strong></td>
-                    <td width="30%" align="center"><strong>开业时间</strong></td>
+                    <td width="50%" align="center"><strong>分类名称</strong></td>
+                    <td width="50%" align="center"><strong>分类图片</strong></td>
                 </tr>
-				<g:each in="${parkInstanceList}" status="i" var="parkInstance">
+				<g:each in="${classifyInstanceList}" status="i" var="classifyInstanc">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						<td><g:link action="edit" id="${parkInstance.id}">${fieldValue(bean: parkInstance, field: "parkName")}</g:link></td>
-						<td>${g.formatDate(date:parkInstance.crateTime, format: 'yyyy-MM-dd')}</td>
+						<td><g:link action="edit" id="${classifyInstanc.id}">${fieldValue(bean: classifyInstanc, field: "classifyName")}</g:link></td>
+                        <td><img src="${classifyInstanc.classifyUrl}"/></td>
 					</tr>
 				</g:each>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${parkInstanceCount ?: 0}" />
+				<g:paginate total="${classifyInstanceCount ?: 0}" />
 			</div>
             </div>
 		</div>

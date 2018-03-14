@@ -4,31 +4,45 @@ import grails.converters.JSON
 
 class ImageController {
 
-    def picture(){
-        def pic = Image.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.newFilename}")
-        response.contentType = 'image/jpeg'
-        response.outputStream << new FileInputStream(picFile)
-        response.outputStream.flush()
+    def picture(Long pictureId){
+        def menuUrls = MenuUrls.findAllByPirtureId(pictureId)
+        if(menuUrls && menuUrls.size() > 0){
+            def menuUrl = menuUrls.get(0)
+            def uploader = grailsApplication.config.uploadr.defaultUploadPath
+            def path = new File("${uploader}/imageUploadr/"+ menuUrl.menuUrl)
+            File picFile = new File(path.getCanonicalPath() + File.separator + "${menuUrl.fileName}")
+            response.contentType = 'image/jpeg'
+            response.outputStream << new FileInputStream(picFile)
+            response.outputStream.flush()
+            response.outputStream.close();
+        }
     }
 
-    def thumbnail(){
-        def pic = Image.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.thumbnailFilename}")
-        response.contentType = 'image/png'
-        response.outputStream << new FileInputStream(picFile)
-        response.outputStream.flush()
+    def thumbnail(Long pictureId){
+        def roomUrls = RoomUrls.findAllByPirtureId(pictureId)
+        if(roomUrls && roomUrls.size() > 0){
+            def roomUrl = roomUrls.get(0)
+            def uploader = grailsApplication.config.uploadr.defaultUploadPath
+            def path = new File("${uploader}/rooms/"+ roomUrl.roomUrl)
+            File picFile = new File(path.getCanonicalPath() + File.separator + "${roomUrl.fileName}")
+            response.contentType = 'image/jpeg'
+            response.outputStream << new FileInputStream(picFile)
+            response.outputStream.flush()
+            response.outputStream.close();
+        }
     }
 
-    def delete(){
-        def pic = Image.get(params.id)
-        File picFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.newFilename}")
-        picFile.delete()
-        File thumbnailFile = new File("${grailsApplication.config.file.upload.directory?:'/tmp'}/${pic.thumbnailFilename}")
-        thumbnailFile.delete()
-        pic.delete()
-
-        def result = [success: true]
-        render result as JSON
+    def classify(Long pictureId){
+        def classifyUrls = Classify.findAllByPictureId(pictureId)
+        if(classifyUrls && classifyUrls.size() > 0){
+            def classify= classifyUrls.get(0)
+            def uploader = grailsApplication.config.uploadr.defaultUploadPath
+            def path = new File("${uploader}/classify/"+ classify.classifyPath)
+            File picFile = new File(path.getCanonicalPath() + File.separator + "${classify.fileName}")
+            response.contentType = 'image/jpeg'
+            response.outputStream << new FileInputStream(picFile)
+            response.outputStream.flush()
+            response.outputStream.close();
+        }
     }
 }

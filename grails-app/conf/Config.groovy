@@ -128,37 +128,39 @@ grails.plugin.springsecurity.controllerAnnotations.staticRules = [
         '/**/css/**':                     ['permitAll'],
         '/**/images/**':                  ['permitAll'],
         '/**/favicon.ico':                ['permitAll'],
-        '/**':                            ['permitAll'],
+        '/**':                              ['permitAll'],
+        '/upload/**':                      ['permitAll'],
+        '/api/park':                ['permitAll']
 ]
 
 grails.plugin.springsecurity.rest.login.active = true
 grails.plugin.springsecurity.rest.login.endpointUrl = '/api/login'
 grails.plugin.springsecurity.rest.logout.endpointUrl = '/api/logout'
-grails.plugin.springsecurity.rest.token.storage.memcached.expiration=300//设置token过期时间
-grails.plugin.springsecurity.rest.login.failureStatusCode = 401
-grails.plugin.springsecurity.rest.login.useJsonCredentials = true
-//grails.plugin.springsecurity.rest.login.useRequestParamsCredentials = true X-Auth-Token
-grails.plugin.springsecurity.rest.login.usernamePropertyName = 'username'
-grails.plugin.springsecurity.rest.login.passwordPropertyName = 'password'
-
-grails.plugin.springsecurity.rest.token.storage.useGorm = true
-grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'com.zy.zds.auth.AuthenticationToken'
-grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
-grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
-
+//grails.plugin.springsecurity.rest.token.storage.memcached.expiration=300//设置token过期时间
+//grails.plugin.springsecurity.rest.login.failureStatusCode = 401
+//grails.plugin.springsecurity.rest.login.useJsonCredentials = true
+////grails.plugin.springsecurity.rest.login.useRequestParamsCredentials = true X-Auth-Token
+//grails.plugin.springsecurity.rest.login.usernamePropertyName = 'username'
+//grails.plugin.springsecurity.rest.login.passwordPropertyName = 'password'
+//
+//grails.plugin.springsecurity.rest.token.storage.useGorm = true
+//grails.plugin.springsecurity.rest.token.storage.gorm.tokenDomainClassName = 'com.zy.zds.auth.AuthenticationToken'
+//grails.plugin.springsecurity.rest.token.storage.gorm.tokenValuePropertyName = 'token'
+//grails.plugin.springsecurity.rest.token.storage.gorm.usernamePropertyName = 'username'
+//
 grails.plugin.springsecurity.rest.token.validation.useBearerToken = false
-grails.plugin.springsecurity.rest.token.validation.headerName = 'X-Auth-Token'
-
+//grails.plugin.springsecurity.rest.token.validation.headerName = 'X-Auth-Token'
+//
 grails.plugin.springsecurity.useSecurityEventListener = true
-
-
+//
+//
 grails {
     plugin {
         springsecurity {
             filterChain {
                 chainMap = [
-                        '/api/guest/**': 'anonymousAuthenticationFilter,restTokenValidationFilter,restExceptionTranslationFilter,filterInvocationInterceptor',
-                        '/api/**': 'JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter',
+                        '/api/**': 'anonymousAuthenticationFilter,restTokenValidationFilter,restExceptionTranslationFilter,filterInvocationInterceptor',
+//                        '/api/**': 'JOINED_FILTERS,-anonymousAuthenticationFilter,-exceptionTranslationFilter,-authenticationProcessingFilter,-securityContextPersistenceFilter',
                         '/**': 'JOINED_FILTERS,-restTokenValidationFilter,-restExceptionTranslationFilter'
                 ]
             }
@@ -179,3 +181,69 @@ grails {
         }
     }
 }
+
+ckeditor {
+    //    config = "/js/ckconfig.js"
+    upload {
+        //basedir = "/tmp/storagearea/"
+        // baseurl = "/uploads/"
+        overwrite = false
+        link {
+            browser = true
+            upload = true
+            allowed = ['jpg', 'png']
+            denied = ['html', 'htm', 'php', 'php2', 'php3', 'php4', 'php5',
+                      'phtml', 'pwml', 'inc', 'asp', 'aspx', 'ascx', 'jsp',
+                      'cfm', 'cfc', 'pl', 'bat', 'exe', 'com', 'dll', 'vbs', 'js', 'reg',
+                      'cgi', 'htaccess', 'asis', 'sh', 'shtml', 'shtm', 'phtm']
+        }
+        image {
+            browser = true
+            upload = true
+            allowed = ['jpg', 'gif', 'jpeg', 'png']
+            denied = []
+        }
+        flash {
+            browser = true
+            upload = true
+            allowed = ['swf']
+            denied = []
+        }
+        flv {
+            browser = true
+            upload = true
+            allowed = ['flv']
+            denied = []
+        }
+
+    }
+}
+
+jqueryDateTimePicker {
+    format {
+        java {
+            datetime = "yyyy-MM-dd HH:mm"
+            date = "yyyy-MM-dd"
+        }
+        picker {
+            date = "'yy-mm-dd'"
+            time = "'H-mm'"
+        }
+    }
+}
+
+fileuploader {
+    avatar {
+        maxSize = 1024 * 256 //256 kbytes
+        allowedExtensions = ["jpg","jpeg","gif","png"]
+        path = "/tmp/avatar/"
+    }
+    docs {
+        maxSize = 1000 * 1024 * 4 //4 mbytes
+        allowedExtensions = ["doc", "docx", "pdf", "rtf"]
+        path = "/tmp/docs/"
+    }
+}
+
+uploadr.defaultUploadPath="D:/"
+//uploadr.maxAgeUploadedFile=1000 * 60 * 60 * 4  // 4 hours in milliseconds

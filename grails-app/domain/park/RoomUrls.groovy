@@ -3,8 +3,8 @@ package park
 class RoomUrls {
     String url
     String fileName;
-    String menuUrl
-    Long menu_id
+    String roomUrl
+    Long roomid
     Long pirtureId
     static constraints = {
     }

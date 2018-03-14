@@ -146,5 +146,5 @@ ul.nav a:hover, ul.nav a:active, ul.nav a:focus {
 .conmain table tr td a{ color:#444;}
 .conmain table tr td a:hover{ color: #F00; text-decoration:underline; }
 
-.botton{ background: url(../images/hht_07.jpg) no-repeat;   color: #FFFFFF;    display: block;    height: 31px;    line-height: 31px;   text-align: center;    width: 92px; font-size:14px; font-weight:bold;}
+.botton{ background: url("hht_07.jpg") no-repeat;   color: #EEEEEE;    display: block;    height: 31px;    line-height: 31px;   text-align: center;    width: 92px; font-size:14px; font-weight:bold;}
 

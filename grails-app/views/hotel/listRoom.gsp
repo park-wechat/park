@@ -11,10 +11,10 @@
 <body>
 <div class="content">
     <div class="contiter">
-        <h2>菜谱列表</h2>
+        <h2>房间列表</h2>
     </div>
     <div class="conmain">
-        <g:link class="botton" id="${restaurant}" action="createMenu">新增菜谱</g:link>
+        <g:link class="botton" id="${hotel}" action="createRoom">新增房间</g:link>
         %{--<a class="botton" action="createMenu">新增菜谱</a>--}%
     </div>
     <div class="conmain">
@@ -27,24 +27,20 @@
     <div class="conmain">
         <table width="100%" border="0" cellspacing="0" cellpadding="0">
             <tr class="tbbg">
-                <td width="25%" align="center"><strong>菜谱名称</strong></td>
+                <td width="25%" align="center"><strong>房间名称</strong></td>
                 <td width="25%" align="center"><strong>价格</strong></td>
-                <td width="25%" align="center"><strong>是否打折</strong></td>
-                <td width="25%" align="center"><strong>菜谱图片</strong></td>
+                <td width="25%" align="center"><strong>房间图片</strong></td>
             </tr>
-            <g:each in="${menuInstanceList}" status="i" var="menuInstance">
+            <g:each in="${roomInstanceList}" status="i" var="roomInstance">
                 <tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-                    <td><g:link action="editMenu" id="${menuInstance.id}">${fieldValue(bean: menuInstance, field: "menuName")}</g:link></td>
-                    <td>${fieldValue(bean: menuInstance, field: "price")}</td>
-                    <g:if test="${menuInstance.sale > 0}">
-                        <td>${fieldValue(bean: menuInstance, field: "sale")}折</td>
-                    </g:if>
-                    <td><img src="${menuInstance.menuPicture}"/></td>
+                    <td><g:link action="editRoom" id="${roomInstance.id}">${fieldValue(bean: roomInstance, field: "roomName")}</g:link></td>
+                    <td>${fieldValue(bean: roomInstance, field: "price")}</td>
+                    <td><img src="${roomInstance.roomPicture}"/></td>
                 </tr>
             </g:each>
         </table>
         <div class="pagination">
-            <g:paginate total="${restaurantInstanceCount ?: 0}" />
+            <g:paginate total="${roomInstanceCount ?: 0}" />
         </div>
     </div>
 </div>

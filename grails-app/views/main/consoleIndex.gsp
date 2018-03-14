@@ -24,15 +24,12 @@
             <div class="menu_left">
                 欢迎您 <strong>${user.username}</strong> ${dateStr} <span class="white"> | </span><g:link controller="logout">[注销]</g:link>
             </div>
-            <%--            <div class="menu_right">--%>
-            <%--	            <a href="index_2.html">后台首页</a><span class="white"> | </span><a href="../index.html">前台首页</a>--%>
-            <%--            </div>--%>
         </div>
         <div class="sys_top_banner">
             <div class="menu_right">
                 <input class="search" type="text" placeholder="输入关键字回车搜索" value="" />
             </div>
-            <div class="sys_logo">移动应用后台管理</div>
+            <div class="sys_logo">景区后台管理</div>
         </div>
     </div>
     <!-- content -->
@@ -44,22 +41,16 @@
                     <a href="${createLink(controller:'user',action:'index')}" target="main_frame">用户管理</a>
                 </li>
                 <li>
-                    <a href="${createLink(controller:'application',action:'index')}" target="main_frame">应用管理</a>
+                    <a href="${createLink(controller:'park',action:'index')}" target="main_frame">景区管理</a>
                 </li>
                 <li>
-                    <a href="${createLink(controller:'applicationUser',action:'index')}" target="main_frame">用户应用权限管理</a>
+                    <a href="${createLink(controller:'restaurant',action:'index')}" target="main_frame">餐厅管理</a>
                 </li>
                 <li>
-                    <a href="${createLink(controller:'connection',action:'index')}" target="main_frame">链接管理</a>
+                    <a href="${createLink(controller:'hotel',action:'index')}" target="main_frame">酒店管理</a>
                 </li>
                 <li>
-                    <a href="${createLink(controller:'newsNotice',action:'index')}" target="main_frame">新闻培训</a>
-                </li>
-                <li>
-                    <a href="${createLink(controller:'training',action:'index')}" target="main_frame">培训</a>
-                </li>
-                <li>
-                    <a href="${createLink(controller:'appVersion',action:'updateVersion')}" target="main_frame">APP版本控制发布</a>
+                    <a href="${createLink(controller:'classify',action:'index')}" target="main_frame">分类管理</a>
                 </li>
             </ul>
         </div>
@@ -71,7 +62,6 @@
     </div>
     <!-- bottom -->
     <div class="sys_bottom">
-        <div class="bottom_copyright">版权所有&nbsp;&copy;&nbsp;2014&nbsp;深圳市中易科技有限公司</div>
         <div class="bottom_version">当前版本 1.0</div>
     </div>
 </div>

@@ -1,15 +1,22 @@
-<%@ page import="park.Park" %>
+<%@ page import="park.Restaurant" %>
 <table>
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: parkInstance, field: 'parkName', 'error')} required">景区名称</td>
-        <td><g:textField name="parkName" style="width:480px" required="" value="${parkInstance?.parkName}"/></td>
+        <td class="fieldcontain ${hasErrors(bean: restaurant, field: 'restaurantName', 'error')} required">餐厅名称</td>
+        <td><g:textField name="restaurantName" style="width:480px" required="" value="${restaurant?.restaurantName}"/></td>
     </tr>
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: parkInstance, field: 'parkContent', 'error')} required">景区介绍</td>
-        <td>
-            <ckeditor:editor height="400px" width="100%" name="parkContent">${parkInstance?.parkContent}</ckeditor:editor>
-            %{--<textarea name="content" rows="18" cols="100">${newsNoticeInstance?.content}</textarea>--}%
-        </td>
+        <td class="fieldcontain ${hasErrors(bean: restaurant, field: 'restaurantOwner', 'error')} required">经营人</td>
+        <td><g:textField name="restaurantOwner" style="width:480px" required="" value="${restaurant?.restaurantOwner}"/></td>
     </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: restaurant, field: 'telephone', 'error')} required">经营人手机号码</td>
+        <td><g:textField name="telephone" style="width:480px" required="" value="${restaurant?.telephone}"/></td>
+    </tr>
+    %{--<tr>--}%
+        %{--<td class="fieldcontain ${hasErrors(bean: restaurant, field: 'createDate', 'error')} required">开业时间</td>--}%
+        %{--<td><jqueryPicker:date name="createDate" value="${g.formatDate(date:restaurant?.createDate, format: 'yyyy-MM-dd')}"/></td>--}%
+
+    %{--</tr>--}%
 </table>
+
 

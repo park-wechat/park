@@ -1,4 +1,4 @@
-<%@ page import="park.Menu" %>
+<%@ page import="park.Room" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,18 +12,18 @@
     <r:layoutResources/>
 </head>
 <body>
-<div class="title">菜谱信息修改</div>
+<div class="title">房间信息修改</div>
 <g:if test="${flash.message}">
     <div class="message" role="status">${flash.message}</div>
 </g:if>
-<g:form url="[resource:restaurant]" method="POST" >
-    <g:hiddenField name="version" value="${menu?.version}" />
+<g:form url="[resource:hotel]" method="POST" >
+    <g:hiddenField name="version" value="${room?.version}" />
     <fieldset class="form">
-        <g:render template="menuEditForm"/>
+        <g:render template="roomEditForm"/>
     </fieldset>
     <fieldset class="buttons">
-        <g:actionSubmit class="save" action="updateMenu" value="更新" />
-        <g:actionSubmit class="delete" action="deleteMenu" value="删除" formnovalidate="" onclick="return confirm('确定删除？');" />
+        <g:actionSubmit class="save" action="updateRoom" value="更新" />
+        <g:actionSubmit class="delete" action="deleteRoom" value="删除" formnovalidate="" onclick="return confirm('确定删除？');" />
     </fieldset>
 </g:form>
 <r:layoutResources/>

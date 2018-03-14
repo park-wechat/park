@@ -1,4 +1,4 @@
-<%@ page import="park.Park" %>
+<%@ page import="park.Hotel" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,12 +10,12 @@
 		<r:layoutResources/>
 	</head>
 	<body>
-		<div class="title">餐厅信息修改</div>
+		<div class="title">酒店信息修改</div>
 		<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 		</g:if>
-			<g:form url="[resource:restaurant, action:'update']" method="POST" >
-				<g:hiddenField name="version" value="${restaurant?.version}" />
+			<g:form url="[resource:hotel, action:'update']" method="POST" >
+				<g:hiddenField name="version" value="${hotel?.version}" />
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

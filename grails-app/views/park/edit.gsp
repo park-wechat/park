@@ -1,4 +1,4 @@
-<%@ page import="com.zy.zds.auth.NewsNotice" %>
+<%@ page import="park.Park" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -8,12 +8,12 @@
         <ckeditor:resources/>
 	</head>
 	<body>
-    <div class="title">新闻通告修改界面</div>
+    <div class="title">景区修改</div>
     <g:if test="${flash.message}">
         <div class="message" role="status">${flash.message}</div>
     </g:if>
-			<g:form url="[resource:newsNoticeInstance, action:'update']" method="POST" >
-				<g:hiddenField name="version" value="${newsNoticeInstance?.version}" />
+			<g:form url="[resource:parkInstance, action:'update']" method="POST" >
+				<g:hiddenField name="version" value="${parkInstance?.version}" />
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

@@ -1,32 +1,34 @@
-<%@ page import="park.Menu" %>
-<%@ page import="park.Restaurant" %>
+<%@ page import="park.Room" %>
+<%@ page import="park.Hotel" %>
 <%
     def uploader = grailsApplication.config.uploadr.defaultUploadPath
-    String menuUrl = (menu != null ? menu.menuUrl : (UUID.randomUUID().getLeastSignificantBits().longValue()))
-    System.out.println("menuUrl----->"+menuUrl)
-    def path = new File("${uploader}/imageUploadr/"+ menuUrl)
-    System.out.println(path.getCanonicalFile())
+    String roomUrl = (room != null ? room.roomUrl : (UUID.randomUUID().getLeastSignificantBits().longValue()))
+    def path = new File("${uploader}/rooms/"+ roomUrl)
 %>
 <table>
-    %{--<tr>--}%
-        %{--<td class="fieldcontain ${hasErrors(bean:menu, field: 'restaurant', 'error')} required">餐厅名称</td>--}%
-        %{--<td><g:hiddenField name="restaurant_id" style="width:480px" required="" value="${restaurant}"/></td>--}%
-    %{--</tr>--}%
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuName', 'error')} required">菜谱名称</td>
-        <td><g:textField name="menuName" style="width:480px" required="" value="${menu?.menuName}"/></td>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomName', 'error')} required">房间名称</td>
+        <td><g:textField name="roomName" style="width:480px" readonly="true"  value="${room?.roomName}"/></td>
     </tr>
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: menu, field: 'price', 'error')} required">价格</td>
-        <td><g:textField name="price" style="width:480px" required="" value="${menu?.price}"/></td>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'price', 'error')} required">价格</td>
+        <td><g:textField name="price" style="width:480px" required="" value="${room?.price}"/></td>
     </tr>
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: menu, field: 'sale', 'error')} required">折数</td>
-        <td><g:textField name="sale" style="width:480px" required="" value="${menu?.sale}"/></td>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomLevel', 'error')} required">房间等级</td>
+        <td><g:textField name="roomLevel" style="width:480px" required="" value="${room?.roomLevel}"/></td>
     </tr>
     <tr>
-        <td class="fieldcontain ${hasErrors(bean: menu, field: 'menuUrl', 'error')} required">菜谱图片</td>
-        <g:hiddenField name="menuUrl" style="width:480px" required="" value="${menuUrl}" />
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomInformation', 'error')} required">房间介绍</td>
+        <td><g:textArea name="roomInformation" style="width:480px" required="" value="${room?.roomInformation}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'mark', 'error')} required">备注/td>
+        <td><g:textArea name="mark" style="width:480px" required="" value="${room?.mark}"/></td>
+    </tr>
+    <tr>
+        <td class="fieldcontain ${hasErrors(bean: room, field: 'roomUrl', 'error')} required">房间图片</td>
+        <g:hiddenField name="roomUrl" style="width:480px" required="" value="${roomUrl}" />
         <td>
             <uploadr:add name="editUploadr" path="${path}" allowedExtensions="jpg,png,gif" direction="up" maxVisible="10"
                          unsupported="${createLink(plugin: 'uploadr', controller: 'upload', action: 'warning')}" maxSize="52428800"

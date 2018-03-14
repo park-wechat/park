@@ -16,7 +16,7 @@ a { text-decoration:none;}
 .sys_top .sys_top_menu .menu_left a:hover { color:#eee; text-decoration:underline;}
 .sys_top .sys_top_menu .menu_left { float:left; padding-left:10px; }
 .sys_top .sys_top_menu .menu_right { float:right; padding-right:10px;} 
-.sys_top .sys_top_banner .sys_logo { background:url(../images/logo.png) no-repeat left center; margin-left:10px; text-indent:200px;}
+.sys_top .sys_top_banner .sys_logo { background:url(/images/logo.png) no-repeat left center; margin-left:10px; text-indent:200px;}
 .sys_top .sys_top_banner .menu_right { float:right; padding-right:10px;} 
 /*bottom*/
 .sys_bottom { height:30px; border-top:1px solid #ccc; box-shadow:0px -1px 2px #eee;}

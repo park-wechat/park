@@ -10,11 +10,11 @@
 		<r:layoutResources/>
 	</head>
 	<body>
-		<div class="title">餐厅创建</div>
+		<div class="title">酒店创建</div>
 		<g:if test="${flash.message}">
 			<div class="message" role="status">${flash.message}</div>
 		</g:if>
-			<g:form url="[resource:restaurant, action:'save']" >
+			<g:form url="[resource:hotel, action:'save']" >
 				<fieldset class="form">
 					<g:render template="form"/>
 				</fieldset>

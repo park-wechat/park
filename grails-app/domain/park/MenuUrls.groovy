@@ -2,10 +2,10 @@ package park
 
 class MenuUrls {
     String url
-    Menu menu;
-
-    static belongsTo = [menu : Menu];
-
+    String fileName;
+    String menuUrl
+    Long menu_id
+    Long pirtureId
     static mapping = {
         version false
     }
@@ -13,6 +13,4 @@ class MenuUrls {
     static constraints = {
 
     }
-
-
 }

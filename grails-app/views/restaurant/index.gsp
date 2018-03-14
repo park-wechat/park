@@ -1,4 +1,4 @@
-<%@ page import="park.Park" %>
+<%@ page import="park.Restaurant" %>
 <!DOCTYPE html>
 <html>
 	<head>
@@ -10,10 +10,10 @@
 	<body>
     <div class="content">
         <div class="contiter">
-            <h2>景区列表</h2>
+            <h2>餐厅列表</h2>
         </div>
         <div class="conmain">
-            <a class="botton" href="create">新增</a>
+            <a class="botton" href="create">新增餐厅</a>
         </div>
         <div class="conmain">
             <strong class="Orange">
@@ -25,18 +25,30 @@
         <div class="conmain">
             <table width="100%" border="0" cellspacing="0" cellpadding="0">
                 <tr class="tbbg">
-                    <td width="70%" align="center"><strong>景区名称</strong></td>
-                    <td width="30%" align="center"><strong>开业时间</strong></td>
+                    <td width="20%" align="center"><strong>餐厅名称</strong></td>
+                    <td width="20%" align="center"><strong>经营人</strong></td>
+                    <td width="20%" align="center"><strong>经营人手机号码</strong></td>
+                    <td width="20%" align="center"><strong>开业时间</strong></td>
+                    <td width="20%" align="center"><strong>管理菜谱</strong></td>
+                    <td width="20%" align="center"><strong>操作</strong></td>
                 </tr>
-				<g:each in="${parkInstanceList}" status="i" var="parkInstance">
+				<g:each in="${restaurantInstanceList}" status="i" var="restaurantInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
-						<td><g:link action="edit" id="${parkInstance.id}">${fieldValue(bean: parkInstance, field: "parkName")}</g:link></td>
-						<td>${g.formatDate(date:parkInstance.crateTime, format: 'yyyy-MM-dd')}</td>
+						<td><g:link action="edit" id="${restaurantInstance.id}">${fieldValue(bean: restaurantInstance, field: "restaurantName")}</g:link></td>
+                        <td>${fieldValue(bean: restaurantInstance, field: "restaurantOwner")}</td>
+                        <td>${fieldValue(bean: restaurantInstance, field: "telephone")}</td>
+                        <td>${g.formatDate(date:restaurantInstance.createDate, format: 'yyyy-MM-dd')}</td>
+                        <td><g:link action="listMenu" id="${restaurantInstance.id}" class="delete" >菜单管理</g:link></td>
+                        <td>
+                            <g:form url="[resource:restaurantInstance, action:'delete']" method="POST" >
+                                <g:actionSubmit class="delete" value="删除" action="delete" onclick="return confirm('确定删除？');" />
+                            </g:form>
+                        </td>
 					</tr>
 				</g:each>
 			</table>
 			<div class="pagination">
-				<g:paginate total="${parkInstanceCount ?: 0}" />
+				<g:paginate total="${restaurantInstanceCount ?: 0}" />
 			</div>
             </div>
 		</div>
