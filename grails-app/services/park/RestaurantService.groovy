@@ -13,7 +13,7 @@ class RestaurantService {
     def getClassifies(){
         def list = Classify.findAll()
         if(list == null){
-            throw new DomainObjectNotFoundException(Park.class, "get classify list")
+            throw new DomainObjectNotFoundException(Classify.class, "get classify list")
         }
         list
     }
@@ -21,7 +21,7 @@ class RestaurantService {
     def getRestaurantList(){
         def list = Restaurant.findAll()
         if(list == null){
-            throw new DomainObjectNotFoundException(Park.class, "get Restaurant list")
+            throw new DomainObjectNotFoundException(Restaurant.class, "get Restaurant list")
         }
         list
     }
@@ -30,19 +30,26 @@ class RestaurantService {
     def getMenuList(){
         def list = Menu.findAll()
         if(list == null){
-            throw new DomainObjectNotFoundException(Park.class, "get Restaurant list")
+            throw new DomainObjectNotFoundException(Menu.class, "get menu list")
         }
         list
     }
 
-    def listClassifyMenu(){
-        def list = Menu.findAllByClassifyName()
+    def listClassifyMenu(String classifyName){
+        def list = Menu.findAllByClassifyName(classifyName)
         if(list == null){
-            throw new DomainObjectNotFoundException(Park.class, "get Restaurant list")
+            throw new DomainObjectNotFoundException(Menu.class, "get menu list")
         }
         list
     }
 
+    def getMenu(Long id){
+        def menu = Menu.get(id)
+        if(menu == null){
+            throw new DomainObjectNotFoundException(Park.class, "get menu")
+        }
+        menu
+    }
 
     def getInfoMenu(String menuName){
         def list = Menu.findAllByMenuName(menuName)
